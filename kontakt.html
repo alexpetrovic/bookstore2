@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knjižara Zaliv</title>
+    <link rel="stylesheet" href="kontakt.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="container flex">
+        <a href="index.html"> <h1>Zaliv</h1></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Početna stranica</a></li>
+                <li><a href="knjige.html" >Knjige</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="vesti.html">Vesti</a></li>
+                <li><a href="kontakt.html" class="active-link">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Form -->
+<div class="container">
+    <div class="contact-box">
+        <div class="left">
+            <h2>Stojiimo vam na usluzi</h2>
+            <p>Ukoliko imate bilo kakvih pitanja u vezi cena, popusta, dostupnosti knjiga, klubu čitalaca, 
+                 dodatnim pogodnostima ili bilo kakvih drugih pitanja, budite slobodni da popunite formu
+                 sa vašim pitanjima i naši prodavci će vam odgovoriti u najkraćem mogućem roku.
+            </p>
+            <br>
+            <div class="border"></div>
+            Email: <a href="mailto:info@zaliv.rs">info@zaliv.rs</a><br>
+            Telefon: <p><a href="tel:+381646969420">064 69 69 420</a></p> <br>
+            <address> Adresa: Andrićev Venac 1, 11000, Beograd<br></address>
+        </div>
+        <form action="potvrda.html" method="get" id="form" class="right">
+            <h2>Kontaktirajte nas</h2>
+            <input type="text" class="field" id="name" placeholder="Ime" >
+            <div id="errorMessageName" class="error-message"></div>
+            <input type="text" class="field" id="lastName" placeholder="Prezime" >
+            <div id="errorMessageLastName" class="error-message"></div>
+            <input type="email" class="field" id="email" placeholder="E-mail" >
+            <div id="errorMessageEmail" class="error-message"></div>
+            <input type="password" class="field" id="password1" placeholder="Lozinka"  minlength="6">
+            <input type="password" class="field" id="password2" placeholder="Potvrdite lozinku" required minlength="6">
+            <div id="errorMessagePassword" class="error-message"></div>
+            
+            <button class="btn">Pošalji</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container flex footer">
+        <address>
+            Autor: <a href="mailto:aleksandarnrt11021@gs.viser.edu.rs">Aleksandar Petrović &#169;</a><br>
+            Indeks: NRT-110/21 <br>
+            Email:aleksandarnrt11021@gs.viser.edu.rs <br>
+        </address> 
+
+        <div class="footer-link">
+            <ul>
+                <li><a href="knjige.html">Knjige</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+
+
+
+</body>
+</html>

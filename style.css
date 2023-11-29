@@ -1,0 +1,392 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    color: #005e9e;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+h1, h2{
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;
+}
+
+p > a{
+    color: #005e9e;
+}
+
+img{
+    width: 100%;
+}
+
+.navbar{
+    background-color: #005e9e;
+    color: #fff;
+    height: 90px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+
+.navbar a{
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.active-link{
+    border-bottom: 2px solid #fff;
+}
+
+.active-link-black{
+    border-bottom: 2px solid #000;
+}
+
+
+.slides{
+    height: 360px;
+    position: relative;
+    max-width: 1200px;
+    display: block;
+    margin: 50px auto ;
+    border: 1px solid black;
+}
+
+.slides * {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide-container{
+    display: block;
+}
+
+.slide {
+    position: absolute;
+    opacity: 0;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide img{
+    max-width: 1200px;
+    max-height: 360px;
+}
+
+.nav label{
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    opacity: 0;
+    z-index: 9;
+    transition: opacity 0.2s ease-in-out;
+    color: #fff;
+    font-size: 156pt;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label{
+    opacity: 0.5;
+}
+
+.nav label:hover { 
+    opacity: 1; 
+}
+
+.nav .next { 
+    right: 0; 
+}
+
+input:checked + .slide-container .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { 
+    display: block; 
+}
+
+.section-heading{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.book-container{
+    margin-bottom: 30px;
+}
+
+.book {
+    display: inline-block;
+    width: 200px;
+    height: 360px;
+    box-shadow: 0 0 20px #aaa;
+    margin: 25px;
+    padding: 10px 10px 0 10px;
+    vertical-align: top;
+    transition: height 1s;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.book:hover{
+    transform: scale(1.05, 1.05);
+}
+  
+.cover {
+    object-fit: fill;
+    border: 2px solid gray;
+    height: 50%;
+    overflow: hidden;
+}
+  
+.cover img {
+    max-width: 100%;
+    max-height: 100%;
+}
+  
+.book p {
+    margin-top: 12px;
+    font-size: 20px;
+}
+  
+.book .author {
+    font-size: 15px;
+}
+
+.news-container{
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.news {
+    width: 33%;
+    height: 400px;
+    box-shadow: 0 0 20px #aaa;
+    margin: 25px;
+    padding: 10px 10px 0 10px;
+    vertical-align: top;
+    transition: height 1s;
+    text-align: center;
+    overflow: hidden;
+    line-height: 1;
+    border-radius: 10px;
+
+}
+
+.news:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.title {
+    margin-top : 12px;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.text{
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: normal;
+    overflow: hidden;
+}
+
+.bottom-link{
+    color: #005e9e;
+    height: 50px;
+    margin-top: 20px;
+    width: 23%;
+}
+
+.bottom-link:hover{
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.footer{
+    justify-content: space-between;
+}
+
+footer{
+    background-color: #005e9e;
+    height: 140px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #cac3b8;
+    margin-top: 40px;
+}
+
+.books-main{
+    margin-top: 50px;
+}
+
+.book-section{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 80%;
+    height: 2000px;
+    padding-top: 35px;
+    text-align: center;
+}
+
+
+
+.book-links{
+    width: 20%;
+    height: 2000px;
+    background-color: #005e9e;
+    padding-top: 50px;
+    padding-left: 15px;
+    font-size: 14px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.genre{
+    line-height: 2.3;
+}
+
+.genre a{
+    display: block;
+    width: 70%;
+}
+
+.genre a:hover{
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.book-cards{
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+}
+
+.next-page a{
+    color: #000;
+    padding: 10px;
+}
+
+.next-page a:hover{
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.next-page{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.message-heading{
+    margin: 90px;
+}
+
+.message{
+    margin: 80px 0 453px 90px;
+    width: 11%;
+}
+
+.message a:hover{
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.flex-gallery{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 70px auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex-gallery img{
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    object-position: bottom;
+    padding: 5px;
+}
+
+.flex-gallery img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.news-section{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 80%;
+    height: 2000px;
+    padding-top: 35px;
+    text-align: center;
+    overflow: hidden;
+}
